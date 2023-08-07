@@ -1,6 +1,7 @@
 import './App.css';
 import { Resume } from './components/Resume';
-import { raw } from './raw';
+import { raw } from './ai/raw';
+
 
 
 function App() {

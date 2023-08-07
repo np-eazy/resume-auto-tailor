@@ -1,4 +1,4 @@
-import { ResumeStructure } from './structure';
+import { ResumeStructure } from '../structure';
 
 export const raw: ResumeStructure = {
     core: {

@@ -1,3 +1,18 @@
+1. Edit the contents of "raw.ts" to include all the contents of the resume.
+
+2. Add the job description to "description.txt"
+
+2. Use "npm run dev" to tailor the resume.
+
+3. Use "npm run start" to render the resume on LocalHost as a React webpagfe.
+
+4. Print the page as a PDF to get the resume
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
