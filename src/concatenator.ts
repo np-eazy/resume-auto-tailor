@@ -1,6 +1,6 @@
 import { BulletPoint, Contact, Course, Date, Location } from "./structure";
 
-export function concatenate(entry: Course | BulletPoint | Contact | Date | Location ): string {
+export function concatenate(entry: Course | BulletPoint | Contact | Date | Location , verbose: boolean = false): string {
     if (entry.type == "Course") {
         return entry.className 
         + (entry.codeName ? 
@@ -25,17 +25,33 @@ export function concatenate(entry: Course | BulletPoint | Contact | Date | Locat
 
     } else if (entry.type == "Date") {
         return entry.month.toString() + "/" 
-        + (entry.day && 
-            entry.day.toString() + "/") 
-        + entry.year.toString();
+        + (entry.day ? 
+            entry.day.toString() + "/" : "") 
+        + entry.year.toString().slice(verbose ? 0 : 2);
 
     } else if (entry.type == "Location") {
-        return (entry.address ?
+        return (entry.address && verbose ?
             (entry.address + ", ") : "") 
         + entry.city + ", " 
-        + entry.state + " " + entry.zipCode;
+        + entry.state + (verbose ? " " + entry.zipCode : "");
 
     } else {
         return "";
     } 
+}
+
+export const reStringify = (rawString: string): string => {
+    const words = rawString.split("_");
+    var builder = "";
+    for (const word of words) {
+        if (word === "dot") {
+            builder += ".";
+        } else if (word === "plus") {
+            builder += "+";
+        } else {
+            builder += " " + word
+        }
+    }
+    builder.slice(1);
+    return builder;
 }

@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url(./fonts/Inter/Inter-VariableFont_slnt,wght.ttf) format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'AllCaps';
+  /* src: local('Ysabeau_SC'), url(./fonts/Ysabeau_SC/YsabeauSC-VariableFont_wght.ttf) format('woff'); */
+  src: local('Alegreya_Sans_SC'), url(./fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf) format('woff');
+
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}

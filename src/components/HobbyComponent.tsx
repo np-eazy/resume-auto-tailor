@@ -1,17 +1,16 @@
 import React from "react";
 import { Hobby } from "../structure";
-import { baseDebugStyle, h1Style, h3Style, parStyle } from "../styles";
-
-const hobbyStyle = {
-    ...baseDebugStyle,
-}
+import { baseDebugStyle, h1Style, parStyle } from "../styles";
 
 export const HobbyComponent = (props: {hobbies: Hobby[]}) => {
-    return (<div style={hobbyStyle}>
-        <div style={h1Style}> Projects </div>
-        {props.hobbies.map((entry: Hobby) => <div>
-            <div style={h3Style}> {entry.name} </div>
-            <div style={parStyle}> {entry.description} </div>
+    return (<div>
+        <div style={h1Style}> Hobbies </div>
+        
+        {props.hobbies.map((entry: Hobby) => <div style={baseDebugStyle}>
+            <div style={{display: "flex", justifyContent: "space-between"}}>
+                <div style={parStyle}> {entry.name} </div>
+                <div style={parStyle}> {entry.description} </div>
+            </div> 
         </div>)}
     </div>);
 }
