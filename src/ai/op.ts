@@ -23,7 +23,8 @@ export const run = async () => {
     'For the list of experiences, choose the four strongest experiences that match the job description best. ',
     'For each experience, choose up to five of the strongest bullet points that match the job description best. ',
     'Make sure that the output follows the same format and schema of the rawResume as a valid Typescript file. ',
-    'Take up to 45 seconds to generate the output. '
+    'If the job description is too poor of a match for anything in my resume, only output the reason that it was a poor match. ',
+    'Take up to 45 seconds to generate the output. ',
   ];
 
   // const prompt: string = promptHeader + promptArgs + promptConstraints.reduce((sum: string, curr: string) => sum + curr, "");
