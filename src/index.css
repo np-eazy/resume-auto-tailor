@@ -27,3 +27,21 @@ code {
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
+
+@font-face {
+  font-family: 'Jost';
+  /* src: local('Ysabeau_SC'), url(./fonts/Ysabeau_SC/YsabeauSC-VariableFont_wght.ttf) format('woff'); */
+  src: local('Jost'), url(./fonts/Jost/Jost-VariableFont_wght.ttf) format('woff');
+
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'Barlow';
+  /* src: local('Ysabeau_SC'), url(./fonts/Ysabeau_SC/YsabeauSC-VariableFont_wght.ttf) format('woff'); */
+  src: local('Barlow_Semi_Condensed'), url(./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf) format('woff');
+
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}

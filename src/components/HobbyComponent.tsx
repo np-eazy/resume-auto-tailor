@@ -5,12 +5,10 @@ import { baseDebugStyle, h1Style, parStyle } from "../styles";
 export const HobbyComponent = (props: {hobbies: Hobby[]}) => {
     return (<div>
         <div style={h1Style}> Hobbies </div>
-        
-        {props.hobbies.map((entry: Hobby) => <div style={baseDebugStyle}>
-            <div style={{display: "flex", justifyContent: "space-between"}}>
-                <div style={parStyle}> {entry.name} </div>
+        <ul>
+            {props.hobbies.map((entry: Hobby) => <li style={{width: "90%"}}>
                 <div style={parStyle}> {entry.description} </div>
-            </div> 
-        </div>)}
+            </li> )}
+        </ul>
     </div>);
 }

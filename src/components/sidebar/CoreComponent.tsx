@@ -4,7 +4,7 @@ import { baseDebugStyle, h1Style, infoContainer, infoKeyStyle, infoValStyle, nam
 import { concatenate } from "../../concatenator";
 
 export const ContactEntry = (props: {name: string, children: any}) => {
-    return (<div style={infoContainer}>
+    return (<div>
         <div style={{display: "flex", justifyContent: "space-between"}}>
             <div style={infoKeyStyle}>
                 {props.name}: 
