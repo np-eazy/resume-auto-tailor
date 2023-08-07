@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build, tsc",
+    "build": "react-scripts build && tsc",
     "dev": "ts-node --esm ./src/ai/op.ts",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

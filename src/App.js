@@ -3,7 +3,6 @@ import { Resume } from './components/Resume';
 import { raw } from './ai/raw';
 
 
-
 function App() {
   return (
     <div className="App">

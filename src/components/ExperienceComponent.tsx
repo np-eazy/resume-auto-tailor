@@ -10,7 +10,7 @@ export const ExperienceComponent = (props: {experiences: ExperienceEntry[]}) => 
                 <div style={{margin: 5}}>
                     <div style={roleStyle}> {entry.role} </div>
                     <div style={{marginLeft: 0}}>
-                        <div style={companyStyle}> {entry.name} </div>
+                        <div style={companyStyle}> {entry.companyName} </div>
                         <div style={parStyle}> 
                             <div style={teamStyle}>
                                 {entry.team}  {entry.isVolunteer ? "(Volunteer)" : ""}

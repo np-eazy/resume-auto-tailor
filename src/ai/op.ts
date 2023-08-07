@@ -1,21 +1,38 @@
-  //Import the OpenAPI Large Language Model (you can import other models here eg. Cohere)
-  import { OpenAI } from "langchain/llms/openai";
+//Import the OpenAPI Large Language Model (you can import other models here eg. Cohere)
+import { OpenAI } from "langchain/llms/openai";
+import { raw } from "./raw";
+import * as fs from "fs";
+import path from "path";
 
-  //Load environment variables (populate process.env from .env file)
-  import * as dotenv from "dotenv";
-  dotenv.config();
+//Load environment variables (populate process.env from .env file)
+import * as dotenv from "dotenv";
+dotenv.config();
 
-  export const run = async () => {
+export const run = async () => {
+  const model = new OpenAI({ temperature: 0.9 });
 
-      //Instantiante the OpenAI model 
-      //Pass the "temperature" parameter which controls the RANDOMNESS of the model's output. A lower temperature will result in more predictable output, while a higher temperature will result in more random output. The temperature parameter is set between 0 and 1, with 0 being the most predictable and 1 being the most random
-      const model = new OpenAI({ temperature: 0.9 });
-      //Calls out to the model's (OpenAI's) endpoint passing the prompt. This call returns a string
-      const res = await model.call(
-          "What would be a good company name a company that makes colorful socks?"
-      );
-      console.log({ res });
-  };
+  // Inputs
+  const rawResume: string = fs.readFileSync(path.join(__dirname, 'raw.ts'), 'utf-8');
+  const jobDescription: string = fs.readFileSync(path.join(__dirname, 'description.txt'), 'utf-8');
 
-  run();
-  console.log("completed")
+  // Prompt structure
+  const promptHeader: string = 'Can you tailor a resume JSON in a way that it would best match a job description? ';
+  const promptArgs: string = 'Here is the resume: """' + rawResume + '""", and here is the job description: """' + jobDescription + '""". ';
+  const promptConstraints: string[] = [
+    'Do not mutate any sentences or strings, only delete whole elements from lists that are marked with [ and ] square brackets. ',
+    'For the list of experiences, choose the four strongest experiences that match the job description best. ',
+    'For each experience, choose up to five of the strongest bullet points that match the job description best. ',
+    'Make sure that the output follows the same format and schema of the rawResume as a valid Typescript file. ',
+    'Take up to 45 seconds to generate the output. '
+  ];
+
+  // const prompt: string = promptHeader + promptArgs + promptConstraints.reduce((sum: string, curr: string) => sum + curr, "");
+  const prompt: string = "Return a statement that sets a variable named 'message' to 'Hello, world!' Make sure the entire return is a valid Typescript file."; // Sanity check to make sure that 400 from large prompts isn't from anything else.
+  const res = await model.call(prompt);
+
+  // Dump result onto designated file
+  fs.writeFileSync(path.join(__dirname, 'tailor.ts'), res);
+};
+
+run();
+console.log("completed");

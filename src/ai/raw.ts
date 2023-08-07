@@ -139,7 +139,7 @@ export const raw: ResumeStructure = {
     },
     blurb: { body: "Results-oriented software engineer with a strong foundation in programming and a hunger for continuous learning. I have a strong talent and drive for quantifying and visualizing challenging problems and their solutions, and a great eye for web design and graphics." },
     experienceEntries: [
-        {name: "UC Berkeley EECS",
+        {companyName: "UC Berkeley EECS",
             team: "Data Structures Course Summer 2022",
             role: "Academic Intern",
             isInternship: true,
@@ -166,7 +166,7 @@ export const raw: ResumeStructure = {
                 },
             ]
         },
-        {name: "IEEE",
+        {companyName: "IEEE",
             team: "Berkeley Chapter",
             role: "Marketing Team Officer",
             isInternship: false,
@@ -193,7 +193,7 @@ export const raw: ResumeStructure = {
                 },
             ]
         },
-        {name: "Amazon",
+        {companyName: "Amazon",
             team: "Online Agreement Services",
             role: "Software Developer & Engineer Intern",
             isInternship: true,
@@ -248,7 +248,7 @@ export const raw: ResumeStructure = {
                 },
             ]
         },
-        {name: "NimbleRx",
+        {companyName: "NimbleRx",
             team: "Platform Team",
             role: "Software Developer & Engineer Intern",
             isInternship: true,
@@ -293,7 +293,7 @@ export const raw: ResumeStructure = {
                 },
             ]
         },
-        {name: "Lawrence Berkeley National Laboratory",
+        {companyName: "Lawrence Berkeley National Laboratory",
             team: "ATAP Division",
             role: "Software Developer & Engineer Intern",
             isInternship: true,
@@ -327,7 +327,7 @@ export const raw: ResumeStructure = {
                 
             ]
         },
-        {name: "",
+        {companyName: "",
             team: "",
             role: "Freelance Web Developer",
             isInternship: false,
@@ -355,7 +355,7 @@ export const raw: ResumeStructure = {
             },
         ]
         },
-        {name: "FOOD For Lane County",
+        {companyName: "FOOD For Lane County",
             team: "Engineering",
             role: "Tech Lead",
             isInternship: false,

@@ -42,7 +42,7 @@ export interface Hobby {
 }
 
 export interface ExperienceEntry {
-    name: string;
+    companyName: string;
     team: string;
     role: string;
     isInternship: boolean;
