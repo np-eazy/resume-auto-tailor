@@ -1,3 +1,4 @@
+// Containers
 export const baseDebugStyle = {
     borderColor: "black",
     margin: 5,
@@ -12,18 +13,9 @@ export const sidebarContainer = {
     maxWidth: 400,
 }
 
-export const nameStyle = {
-    fontSize: 48, 
-    fontWeight: 600,
-    margin: 5,
-    marginBottom: 10,
-}
-
-export const titleStyle = {
-    fontSize: 20, 
-    fontWeight: 400,
-    margin: 5,
-    fontStyle: "italic",
+export const bodyContainer = {
+    float: "left" as "left",
+    maxWidth: 880,
 }
 
 export const infoContainer = {
@@ -39,81 +31,17 @@ export const infoSubcontainer = {
     borderColor: "#bbbbff",
     borderWidth: 1,
     borderStyle: "none",
+    maxWidth: 700,
 }
 
-export const infoKeyStyle = {
-    fontSize: 12, 
-    fontWeight: 600,
-    margin: 5,
-    fontFamily: "AllCaps",
-    fontStyle: "bold",
-}
 
-export const infoSubkeyStyle = {
-    fontSize: 12, 
-    fontWeight: 400,
-    margin: 5,
-    fontStyle: "italic",
-}
-
-export const infoValStyle = {
-    fontSize: 12, 
-    fontWeight: 400,
-    margin: 5,
-    textAlign: "right" as "right",
-    fontStyle: "italic",
-}
-
-export const bodyContainer = {
-    float: "left" as "left",
-    maxWidth: 880,
-}
-
-export const roleStyle = {
-    fontSize: 20, 
-    fontWeight: 600,
-    fontFamily: "Inter",
-    fontStyle: "bold",
-}
-
-export const companyStyle = {
-    fontSize: 16, 
-    fontWeight: 400,
-    fontFamily: "AllCaps",
-    fontStyle: "bold",
-}
-
+// Common
 export const h1Style = {
     fontSize: 32,
-    marginTop: 8,
-    marginLeft: 5,
-    marginBottom: 24,
-    fontFamily: "Inter",
-}
-
-export const h2Style = {
-    fontSize: 28,
-    marginTop: 8,
-    marginLeft: 5,
-    marginBottom: 24,
-    fontFamily: "Inter",
-}
-
-export const h3Style = {
-    fontSize: 24,
-    marginBottom: 12,
-    fontFamily: "Inter",
-}
-
-export const bulletStyle = {
-    fontSize: 12,
-    paddingBottom: 12,
-    fontFamily: "Inter",
-}
-
-export const parStyle = {
-    fontSize: 12,
-    fontFamily: "Inter",
+    marginTop: 16,
+    marginBottom: 16,
+    fontWeight: 800,
+    fontFamily: "AllCaps",
 }
 
 export const dateStyle = {
@@ -127,3 +55,79 @@ export const locationStyle = {
     fontWeight: 600,
     fontFamily: "AllCaps",
 }
+
+export const infoKeyStyle = {
+    fontSize: 12, 
+    fontWeight: 600,
+    margin: 5,
+    fontFamily: "AllCaps",
+    fontStyle: "bold",
+}
+
+export const infoValStyle = {
+    fontSize: 12, 
+    fontWeight: 400,
+    margin: 5,
+    textAlign: "right" as "right",
+    fontStyle: "italic",
+}
+
+
+
+
+
+// Core
+export const nameStyle = {
+    fontSize: 48, 
+    fontWeight: 600,
+    margin: 5,
+    marginBottom: 10,
+    fontFamily: "AllCaps",
+}
+
+export const titleStyle = {
+    fontSize: 20, 
+    fontWeight: 400,
+    margin: 5,
+    fontFamily: "AllCaps",
+}
+
+
+
+// Experience
+export const roleStyle = {
+    fontSize: 24, 
+    fontWeight: 600,
+    fontFamily: "AllCaps",
+    fontStyle: "bold",
+    marginBottom: 8,
+}
+
+export const companyStyle = {
+    fontSize: 20, 
+    fontWeight: 400,
+    fontStyle: "italic",
+    fontFamily: "AllCaps",
+    marginBottom: 4,
+}
+
+export const teamStyle = {
+    fontSize: 12,
+    fontWeight: 600, 
+    fontFamily: "AllCaps",
+    fontStyle: "italic",
+}
+
+export const bulletStyle = {
+    fontSize: 12,
+    paddingBottom: 12,
+    fontFamily: "Inter",
+}
+
+export const parStyle = {
+    fontSize: 12,
+    fontFamily: "Inter",
+}
+
+
+

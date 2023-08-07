@@ -1,6 +1,6 @@
 import React from "react";
 import { Course, Degree } from "../../structure";
-import { baseDebugStyle, h1Style, h2Style, h3Style, infoContainer, infoKeyStyle, infoSubkeyStyle, infoValStyle, parStyle, infoSubcontainer, titleStyle } from "../../styles";
+import { baseDebugStyle, h1Style, infoContainer, infoKeyStyle, infoValStyle, parStyle, infoSubcontainer, titleStyle } from "../../styles";
 import { concatenate } from "../../concatenator";
 import { PlaceComponent } from "../../PlaceComponent";
 

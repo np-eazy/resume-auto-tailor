@@ -27,7 +27,7 @@ export const Resume = (props: {contents: ResumeStructure}) => {
             <div style={baseDebugStyle}>
                 <div style={infoContainer}>
                     <div style={parStyle}>
-                        <div style={{margin: 5}}>{props.contents.blurb.body}</div>
+                        {props.contents.blurb.body}
                     </div>
                 </div>
                 <ExperienceComponent experiences={props.contents.experienceEntries} />
