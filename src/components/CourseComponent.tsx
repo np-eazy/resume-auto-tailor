@@ -9,6 +9,6 @@ const courseStyle = {
 
 export const CourseComponent = (props: {course: Course}) => {
     return (<div style={courseStyle}>
-        {concatenate(props.course)}
+        {props.course && concatenate(props.course)}
     </div>);
 }

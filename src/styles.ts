@@ -1,7 +1,9 @@
 export const baseDebugStyle = {
     borderColor: "black",
+    margin: 5,
     borderWidth: 1,
     borderStyle: "solid",
+    textAlign: "left" as "left",
 };
 
 export const h1Style = {

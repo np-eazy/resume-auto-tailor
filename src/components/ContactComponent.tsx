@@ -8,7 +8,7 @@ const contactStyle = {
 }
 
 export const ContactComponent = (props: {contact: Contact}) => {
-    return (<div style={contactStyle}>
+    return (props.contact && <div style={contactStyle}>
         {concatenate(props.contact)}
     </div>);
 }

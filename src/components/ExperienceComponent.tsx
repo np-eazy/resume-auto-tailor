@@ -12,9 +12,9 @@ export const ExperienceComponent = (props: {experiences: ExperienceEntry[]}) => 
     return (<div style={experienceStyle}>
         <div style={h1Style}> Experience </div>
         {props.experiences.map((entry: ExperienceEntry) => <div>
-            <div style={h3Style}> {entry.name}, {entry.name}, {entry.name} {entry.isInternship && "(Internship)"} {entry.isVolunteer && "(Volunteer)"} </div>
+            <div style={h3Style}> {entry.name}, {entry.team}, {entry.role} {entry.isInternship && "(Internship)"} {entry.isVolunteer && "(Volunteer)"} </div>
             <div style={h3Style}>
-                {concatenate(entry.location)}, {concatenate(entry.startDate)} - {concatenate(entry.endDate)}
+                {concatenate(entry.location)}, {concatenate(entry.startDate)} - {entry.endDate ? concatenate(entry.endDate) : "Current"}
             </div>
             {entry.bulletPoints.map((bulletPoint: BulletPoint) => <div>
                 <BulletPointComponent bulletPoint={bulletPoint} />

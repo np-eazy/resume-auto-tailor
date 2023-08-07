@@ -14,7 +14,7 @@ export const CoreComponent = (props: {core: Core}) => {
                 {props.core.contact.name}
             </div>
             <div style={parStyle}>
-                {props.core.contact.number} | {props.core.contact.email} | {concatenate(props.core.location)} | {concatenate(props.core.location)} 
+                {props.core.contact.number} | {props.core.contact.email} | {props.core.location && concatenate(props.core.location)} | {props.core.homesiteUrl} 
             </div>
         </div>
     </div>);

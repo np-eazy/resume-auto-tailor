@@ -9,6 +9,6 @@ const dateStyle = {
 
 export const DateComponent = (props: {date: Date}) => {
     return (<div style={dateStyle}>
-        {concatenate(props.date)}
+        {props.date && concatenate(props.date)}
     </div>);
 }

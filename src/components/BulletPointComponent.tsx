@@ -9,6 +9,6 @@ const bulletPointStyle = {
 
 export const BulletPointComponent = (props: {bulletPoint: BulletPoint}) => {
     return (<div style={bulletPointStyle}>
-        {concatenate(props.bulletPoint)}
+        {props.bulletPoint.body}
     </div>);
 }

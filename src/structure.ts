@@ -14,6 +14,7 @@ export interface Core {
 
 export interface Skills {
     skillMap: Map<string, number>;
+    skillObj: Object;
 }
 
 export interface Degree {
@@ -35,7 +36,7 @@ export interface ExperienceEntry {
     isVolunteer: boolean;
     location: Location;
     startDate: Date;
-    endDate: Date;
+    endDate?: Date;
     supervisor: Contact;
     reasonForLeaving?: string;
     bulletPoints: BulletPoint[];
@@ -43,12 +44,12 @@ export interface ExperienceEntry {
 
 export interface ProjectEntry {
     name: string;
+    isHidden?: boolean;
     projectLink: string;
     role: string;
     location: Location;
     startDate: Date;
-    endDate: Date;
-    supervisor: Contact;
+    endDate?: Date;
     bulletPoints: BulletPoint[];
 }
 
