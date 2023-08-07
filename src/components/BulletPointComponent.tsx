@@ -1,7 +1,6 @@
 import React from "react";
 import { BulletPoint } from "../structure";
 import { baseDebugStyle } from "../styles";
-import { concatenate } from "../concatenator";
 
 const bulletPointStyle = {
     ...baseDebugStyle,
@@ -9,6 +8,6 @@ const bulletPointStyle = {
 
 export const BulletPointComponent = (props: {bulletPoint: BulletPoint}) => {
     return (<div style={bulletPointStyle}>
-        {props.bulletPoint.body}
+        {" - " + props.bulletPoint.body}
     </div>);
 }

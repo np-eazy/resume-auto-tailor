@@ -1,7 +1,7 @@
 import React from "react";
-import { Course, Degree } from "../structure";
-import { baseDebugStyle, h1Style, h2Style, h3Style, parStyle } from "../styles";
-import { concatenate } from "../concatenator";
+import { Course, Degree } from "../../structure";
+import { baseDebugStyle, h1Style, h2Style, h3Style, parStyle } from "../../styles";
+import { concatenate } from "../../concatenator";
 
 const degreeStyle = {
     ...baseDebugStyle,

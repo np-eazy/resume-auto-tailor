@@ -1,7 +1,7 @@
 import React from "react";
-import { Core } from "../structure";
-import { baseDebugStyle, h1Style, parStyle } from "../styles";
-import { concatenate } from "../concatenator";
+import { Core } from "../../structure";
+import { baseDebugStyle, h1Style, parStyle } from "../../styles";
+import { concatenate } from "../../concatenator";
 
 const coreStyle = {
     ...baseDebugStyle,

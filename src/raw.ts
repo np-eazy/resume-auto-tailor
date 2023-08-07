@@ -12,6 +12,7 @@ export const raw: ResumeStructure = {
             state: "CA",
             zipCode: "94583",
         },
+        title: "Software Engineer (Entry Level)",
         homesiteUrl: "https://joeyjzhu.com",
     },
     skills: {
@@ -136,7 +137,62 @@ export const raw: ResumeStructure = {
         ],
         gpa: 3.5,
     },
+    blurb: { body: "My name is Joey Zhu" },
     experienceEntries: [
+        {name: "UC Berkeley EECS",
+            team: "Data Structures Course Summer 2022",
+            role: "TA",
+            isInternship: true,
+            isVolunteer: true,
+            location: {type: "Location",
+                address: "Cory Hall",
+                city: "Berkeley",
+                state: "CA",
+                zipCode: "94720",
+            },
+            startDate: {type: "Date",
+                month: 1, day: 18, year: 2022, 
+            },
+            endDate: {type: "Date",
+                month: 5, day: 6, year: 2022,
+            },
+            supervisor: {type: "Contact",
+                name: "Eric Tang",
+                email: "erictang000@berkeley.edu",
+            },
+            bulletPoints: [
+                {type: "BulletPoint",
+                    body: "Provided groups of 15-20 with practice problems on data structures, preparing them for midterm exams",
+                },
+            ]
+        },
+        {name: "IEEE",
+            team: "Berkeley Chapter",
+            role: "Marketing Team Officer",
+            isInternship: false,
+            isVolunteer: true,
+            location: {type: "Location",
+                address: "Cory Hall",
+                city: "Berkeley",
+                state: "CA",
+                zipCode: "94720",
+            },
+            startDate: {type: "Date",
+                month: 1, day: 18, year: 2022, 
+            },
+            endDate: {type: "Date",
+                month: 5, day: 6, year: 2022,
+            },
+            supervisor: {type: "Contact",
+                name: "Katja Maucec",
+                email: "katja.maucec@berkeley.edu",
+            },
+            bulletPoints: [
+                {type: "BulletPoint",
+                    body: "Used Adobe Photoshop and Illustrator to design promotional stickers, semesterly organization shirt, and new club logo",
+                },
+            ]
+        },
         {name: "Amazon",
             team: "Online Agreement Services",
             role: "Software Developer & Engineer",
@@ -211,6 +267,7 @@ export const raw: ResumeStructure = {
             },
             supervisor: {type: "Contact",
                 name: "Vladislav Yavichev",
+                email: "https://www.linkedin.com/in/yavichev/",
             },
             bulletPoints: [
                 {type: "BulletPoint",
@@ -383,7 +440,18 @@ export const raw: ResumeStructure = {
             ]
         },
     ],
-  }
+    hobbies: [
+        {name: "Piano",
+            description: "I've played piano since I was 5"
+        },
+        {name: "Cello",
+            description: "I've played cello since I was 8"
+        },
+        {name: "Oil Painting",
+            description: "I've done oil painting since I was 12"
+        },
+    ],
+}
 
 
 

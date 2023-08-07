@@ -1,13 +1,17 @@
 export interface ResumeStructure {
     core: Core;
-    degree: Degree;
     skills: Skills;
+    degree: Degree;
+
+    blurb: Blurb;
     experienceEntries: ExperienceEntry[];
     projectEntries: ProjectEntry[];
+    hobbies: Hobby[];
 }
 
 export interface Core {
     contact: Contact;
+    title: string;
     location: Location;
     homesiteUrl?: string;
 }
@@ -26,6 +30,15 @@ export interface Degree {
     endDate: Date;
     courses: Course[];
     gpa?: number;
+}
+
+export interface Blurb {
+    body: string;
+}
+
+export interface Hobby {
+    name: string;
+    description: string;
 }
 
 export interface ExperienceEntry {
