@@ -6,6 +6,21 @@ const skillsStyle = {
     ...baseDebugStyle,
 }
 
+export const SkillsEntry = (props: {name: string, children: any}) => {
+    return (<div style={baseDebugStyle}>
+        <div style={{display: "flex", justifyContent: "space-between"}}>
+            <div style={baseDebugStyle}>
+                {props.name}
+            </div>
+            <div style={baseDebugStyle}>
+                {props.children}
+            </div>
+        </div>
+    </div>);
+}
+
+
+
 export const SkillsComponent = (props: {skills: Skills}) => {
     const vals = Object.values(props.skills.skillObj);
     return (<div style={skillsStyle}>
@@ -13,12 +28,15 @@ export const SkillsComponent = (props: {skills: Skills}) => {
         {Object.keys(props.skills.skillObj)
         .filter((key: string, val: number) => vals[val] != 0)
         .map((key: string, val: number) => 
-        <div>
-            {key + ": " + Object.values(props.skills.skillObj)[val].toString() + " years"}
-        </div>)}
+        <SkillsEntry name={key}>
+            {Object.values(props.skills.skillObj)[val].toString() + " years"}
+        </SkillsEntry>
+        )}
         
-        {Object.keys(props.skills.skillObj)
-        .filter((key: string, val: number) => vals[val] == 0)
-        .map((key: string, val: number) => key + ", ")}
+        <div style={baseDebugStyle}>
+            {Object.keys(props.skills.skillObj)
+            .filter((key: string, val: number) => vals[val] == 0)
+            .map((key: string, val: number) => key + ", ")}
+        </div>
     </div>);
 }
