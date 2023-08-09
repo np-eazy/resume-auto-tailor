@@ -1,6 +1,6 @@
 import './App.css';
 import { Resume } from './components/Resume';
-import { raw } from './ai/raw';
+import { raw } from './ai/resumes/description-raw.ts'
 
 
 function App() {

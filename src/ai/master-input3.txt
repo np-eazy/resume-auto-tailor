@@ -1,0 +1,38 @@
+I am a results-oriented software engineer with a strong foundation in programming and a hunger for continuous learning. I have a strong talent and drive for quantifying and visualizing challenging problems and their solutions, and a great eye for web design and graphics.
+I enjoy drawing models and mathematical parallels between the real world of physics and the virtual world of software and AI.
+
+During my internship at Amazon, I automated a critical business workflow of requesting and exchanging internal permissions by creating a form feature and new APIs, saved 3 hours of work each for over 1000 users.
+I Leveraged Git and IntelliJ for efficient version control and collaboration within cross-functional teams working in an Agile environment.
+I Provisioned a new CloudFormation stack including AWS Lambda, SQS, and DynamoDB to deploy and manage scalable feature on team backend.
+I Configured backend infrastructure using CDK and Typescript, and wrote business logic using singleton dependency injection design pattern and Java.
+I Practiced test-driven development by unit tests with above 90 percent coverage, and tested feature in CI/CD developer environments to find and troubleshoot inactive-user edge cases.
+I Refactored React.js frontend error boundaries to display form feature from any webpage.
+I Designed an automatic, templated email using HTML, CSS, and Javascript.
+I Implemented clean code, code refactoring, and code review best practices, ensuring high code quality and maintainability.
+I Added a new SNS topic and DLQ to alarm on bounced emails to keep feature reliable and maintainable.
+I Added procedures in runbook for handling edge cases of bounced emails and inactive users.
+
+During my internship at NimbleRx, I added S3 fallback table to AWS data pipeline architecture design, solving problem of dynamically composing notification data from user SMS webhooks.
+I Organized tasks and tickets using Atlassian JIRA, and meeting notes and feedback using Confluence.
+I Improved performance of cron jobs by multithreading Java Executor Service, leveraging up to 8 new cores to handle batched user shopping cart APIs.
+I Refactored over 100 Spring Boot dependency classes to use Java configurations instead of XML, unifying design patterns across backend codebase.
+I Delegated large code changes with other interns and reviewed their pull requests using Bitbucket.
+I Practiced test-driven development and continuous integration using Docker and Jenkins, also resolving long-standing warnings in build logs.
+I Monitored SQS Cloudwatch monitors after deploying new release, catching and resolving a throttle before severely affecting user end of production.
+
+During my internship at Lawrence Berkeley National Laboratory, I added C++ SIMD vectorization, OpenMP multithreading, and particle memory restructuring to plasma simulation, improving overall performance while maintaining future parallelizability.
+I Designed a C++ parser to convert LUA scripts of CERN particle accelerators to Python input files for LBNL particle simulations.
+I Integrated an existing LUA interpreter from CERN codebase into parser, replacing old case-by-case RegEx parsing approach.
+
+As an independent developer after graduating, I designed personal webpage UI mockups using Illustrator, implemented using React.js.
+I planned, implemented, and completed Atom Visualizer and Pentaquad personal projects.
+
+As the solo developer for my JS web game Pentaquad, I organized issues and self-reviewed pull requests using Github web application, maintaining future portability to existing game engines/
+Built game engine from ground-up using JavaScript and HTML Canvas.
+Deployed React.js game client using Google Cloud.
+Incorporated feedback, requests, and design patterns from friends and experienced game developers.
+
+Currently, at nonprofit organization FOOD For Lane County, I am leading design and development of a food bank delivery app that sources volunteer drivers, as an improvement to an existing Doordash partnership.
+I Designed clean UI mockups using Photoshop and Illustrator, helping shareholders and project managers better understand needs and functionalities for the app.
+I Scoped core functionalities, designed architecture, and planned 6-month timeline to build a minimum viable product, organizing work with other part-time volunteers.
+I Designed algorithm to plan large-scale routing for up to 250 deliveries for one day, accounting for different volunteer driver preferences and capacities.

@@ -12,6 +12,14 @@
 # production
 /build
 
+# data
+/src/ai/descriptions
+/src/ai/output1
+/src/ai/output2
+/src/ai/coverletters
+/src/ai/followups
+/src/ai/resumes
+
 # misc
 .DS_Store
 .env.local
