@@ -1,7 +1,8 @@
 export const LANG_OBJECT = {
     "Python": 3,
-    "JavaScript": 3,
+    "JavaScript ES6": 3,
     "HTML": 2,
+    "XML": 2,
     "CSS": 2,
     "Typescript": 1,
     "React_dot_js": 2,
@@ -17,7 +18,9 @@ export const LANG_OBJECT = {
 
 export const SKILL_OBJECT = {
     "VSCode": 3,
+    "NPM": 3,
     "Git": 3,
+    "zsh": 3,
     "Photoshop": 2,
     "Illustrator": 2,
     "AWS_CDK": 1,
