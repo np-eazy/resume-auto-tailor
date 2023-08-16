@@ -17,8 +17,6 @@ export const SkillsEntry = (props: {name: string, children: any}) => {
     </div>);
 }
 
-
-
 export const SkillsComponent = (props: {skills: Skills}) => {
     
     const skillVals = Object.values(props.skills.skillObj);

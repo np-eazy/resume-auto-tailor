@@ -16,32 +16,36 @@ export const CourseEntry = (props: {course: Course}) => {
     </div>);
 };
 
-export const DegreeComponent = (props: {degree: Degree}) => {
+export const DegreeComponent = (props: {degrees: Degree[]}) => {
     return (<div>
         <div style={h1Style}> Education </div>
+        {props.degrees.map((degree: Degree) => <div>
             <div>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
                     <div style={{margin: 5}}>
-                        <div style={roleStyle}>{props.degree.schoolName} </div>
+                        <div style={roleStyle}>{degree.schoolName} </div>
                         <div style={{marginLeft: 0}}>
-                            <div style={companyStyle}> {props.degree.degree + " " + props.degree.major} </div>
+                            {degree.degree && <div style={companyStyle}> {degree.degree + " " + degree.major} </div>}
                             <div style={parStyle}> 
                                 <div style={teamStyle}>
-                                    {props.degree.gpa ? "GPA: " + props.degree.gpa : ""}
+                                    {degree.gpa ? "GPA: " + degree.gpa : ""}
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div style={infoSubcontainer}>
-                        <PlaceComponent startDate={props.degree.startDate} endDate={props.degree.endDate} location={props.degree.location} />
+                        <PlaceComponent startDate={degree.startDate} endDate={degree.endDate} location={degree.location} />
                     </div>
                 </div>
             </div>
-        <ul>
-            {props.degree.courses.map((course: Course) => <li>
-                <CourseEntry course={course} />
-            </li> )}
-        </ul>
+            <ul>
+                {degree.courses.map((course: Course) => <li>
+                    <CourseEntry course={course} />
+                </li> )}
+            </ul>
+            <div style={{minHeight: 25}}></div>
+        </div>)}
+        
     </div>);
 }

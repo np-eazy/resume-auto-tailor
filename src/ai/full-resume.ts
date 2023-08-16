@@ -63,7 +63,7 @@ export const raw: ResumeStructure = {
     skillObj: SKILL_OBJECT,
     langObj: LANG_OBJECT,
   },
-  degree: {
+  degrees: [{
     schoolName: "University of California, Berkeley",
     degree: "B.A.",
     major: "Computer Science",
@@ -140,6 +140,43 @@ export const raw: ResumeStructure = {
     ],
     gpa: 3.5,
   },
+  {
+    schoolName: "Coursera",
+    location: {
+      type: "Location",
+      address: "",
+      city: "Online",
+      state: "",
+      zipCode: "",
+    },
+    startDate: { type: "Date", month: 6, day: 1, year: 2023 },
+    courses: [
+      {
+        type: "Course",
+        className: "React.js",
+        isMajor: true,
+        codeName: "Meta iOS Developer",
+      },
+      {
+        type: "Course",
+        className: "React Native",
+        isMajor: true,
+        codeName: "Meta iOS Developer",
+      },
+      {
+        type: "Course",
+        className: "VR, XR Development",
+        isMajor: true,
+        codeName: "U Michigan",
+      },
+      {
+        type: "Course",
+        className: "Developing with Unity",
+        isMajor: true,
+        codeName: "U Michigan",
+      },
+    ],
+  },],
   blurb: { body: b_msg01 + b_msg02 + b_msg03 },
   experienceEntries: [
     {

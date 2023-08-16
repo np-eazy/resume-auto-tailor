@@ -39,3 +39,14 @@ export const SKILL_OBJECT = {
     "ElasticSearch": 0,
     "Docker": 0,
 };
+
+export const HOBBY_OBJECT = {
+    "Piano": 12,
+    "Cello": 8,
+    "Saxophone": 4,
+    "Badminton": 3,
+    "Oil Painting": 2,
+    "Graphic Design": 2,
+    "Digital Art": 2,
+    "Costume Design": 2,
+};

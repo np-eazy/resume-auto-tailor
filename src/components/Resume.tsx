@@ -4,7 +4,7 @@ import { DegreeComponent } from "./sidebar/DegreeComponent";
 import { SkillsComponent } from "./sidebar/SkillsComponent";
 import { ExperienceComponent } from "./ExperienceComponent";
 import { ProjectComponent } from "./ProjectComponent";
-import { HobbyComponent } from "./HobbyComponent";
+import { HobbyComponent } from "./sidebar/HobbyComponent";
 import { baseDebugStyle, bodyContainer, infoContainer, pageContainer, parStyle, sidebarContainer } from "../styles";
 
 const spacer = (size: number) => <div style={{minHeight: size}}></div>;
@@ -18,9 +18,9 @@ export const Resume = (props: {contents: ResumeStructure}) => {
                 {spacer(SIDEBAR_SPACING)}
                 <SkillsComponent skills={props.contents.skills} />
                 {spacer(SIDEBAR_SPACING)}
-                <DegreeComponent degree={props.contents.degree} />
+                <DegreeComponent degrees={props.contents.degrees} />
                 {spacer(SIDEBAR_SPACING)}
-                {/* <HobbyComponent hobbies={props.contents.hobbies} /> */}
+                <HobbyComponent hobbies={props.contents.hobbies} />
 
                 {/* <div style={{fontSize: 1, color: "#ffffff"}}>
                     {JSON.stringify(props.contents)}

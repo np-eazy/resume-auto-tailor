@@ -32,7 +32,7 @@ export function concatenate(entry: Course | BulletPoint | Contact | Date | Locat
     } else if (entry.type == "Location") {
         return (entry.address && verbose ?
             (entry.address + ", ") : "") 
-        + entry.city + ", " 
+        + entry.city +(entry.state ? ", " : "" )
         + entry.state + (verbose ? " " + entry.zipCode : "");
 
     } else {
