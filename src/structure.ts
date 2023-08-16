@@ -19,6 +19,7 @@ export interface Core {
 export interface Skills {
     skillMap: Map<string, number>;
     skillObj: Object;
+    langObj: Object;
 }
 
 export interface Degree {

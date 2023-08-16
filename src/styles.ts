@@ -14,6 +14,7 @@ export const sidebarContainer = {
     height: 2800,
     maxWidth: 400,
     padding: 20,
+    paddingRight: 25,
     float: "left" as "left",
     display: "flex",
     justifyContent: "space-between",

@@ -21,36 +21,61 @@ export const SkillsEntry = (props: {name: string, children: any}) => {
 
 export const SkillsComponent = (props: {skills: Skills}) => {
     
-    const vals = Object.values(props.skills.skillObj);
-    const keys = Object.keys(props.skills.skillObj)
-    .filter((key: string, val: number) => vals[val] != 0).map((key: string, val: number) => 
+    const skillVals = Object.values(props.skills.skillObj);
+    const skillKeys = Object.keys(props.skills.skillObj)
+    .filter((key: string, val: number) => skillVals[val] != 0).map((key: string, val: number) => 
         <div>
             <SkillsEntry name={reStringify(key)}>
-                {vals[val].toString() + (vals[val] == 1 ? " year" : " years")}
+                {skillVals[val].toString() + (skillVals[val] == 1 ? " year" : " years")}
             </SkillsEntry>
         </div>);
-    const leftHalf = keys.slice(0, keys.length / 2);
-    const rightHalf = keys.slice(keys.length / 2);
+
+    const langVals = Object.values(props.skills.langObj);
+    const langKeys = Object.keys(props.skills.langObj)
+    .filter((key: string, val: number) => langVals[val] != 0).map((key: string, val: number) => 
+    <div>
+        <SkillsEntry name={reStringify(key)}>
+            {langVals[val].toString() + (langVals[val] == 1 ? " year" : " years")}
+        </SkillsEntry>
+    </div>);
+
 
     
     return (<div>
         <div style={h1Style}> Skills </div>
         <div style={{display: "flex", justifyContent: "space-between"}}>
             <div>
-                {keys.slice(0, keys.length / 2).map((element: any) => element)}
+                {langKeys.slice(0, langKeys.length / 2).map((element: any) => element)}
             </div>
             <div>
-                {keys.slice(keys.length / 2).map((element: any) => element)}
+                {langKeys.slice(langKeys.length / 2).map((element: any) => element)}
             </div>
         </div>
-        
-
+        <div style={{minHeight: 16}}></div>
+        <div>
+            <div style={{padding: 5}}>
+                <div style={parStyle}>
+                    {Object.keys(props.skills.langObj)
+                    .filter((key: string, val: number) => langVals[val] == 0)
+                    .map((key: string, val: number) => reStringify(key) + ", ")}
+                </div>        
+            </div>
+        </div>
+        <div style={{minHeight: 25}}></div>
+        <div style={{display: "flex", justifyContent: "space-between"}}>
+            <div>
+                {skillKeys.slice(0, skillKeys.length / 2).map((element: any) => element)}
+            </div>
+            <div>
+                {skillKeys.slice(skillKeys.length / 2).map((element: any) => element)}
+            </div>
+        </div>
         <div style={{minHeight: 16}}></div>
         <div>
             <div style={{padding: 5}}>
                 <div style={parStyle}>
                     {Object.keys(props.skills.skillObj)
-                    .filter((key: string, val: number) => vals[val] == 0)
+                    .filter((key: string, val: number) => skillVals[val] == 0)
                     .map((key: string, val: number) => reStringify(key) + ", ")}
                 </div>        
             </div>

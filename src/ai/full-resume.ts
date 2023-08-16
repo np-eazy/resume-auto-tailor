@@ -39,7 +39,7 @@ import {
   b_pent3,
   b_pent4,
 } from "./tailors/general-tailor";
-import { SKILL_OBJECT } from "./master-input2";
+import { SKILL_OBJECT, LANG_OBJECT } from "./master-input2";
 
 export const raw: ResumeStructure = {
   core: {
@@ -61,6 +61,7 @@ export const raw: ResumeStructure = {
   skills: {
     skillMap: new Map(),
     skillObj: SKILL_OBJECT,
+    langObj: LANG_OBJECT,
   },
   degree: {
     schoolName: "University of California, Berkeley",
