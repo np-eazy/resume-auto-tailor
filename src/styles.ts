@@ -11,7 +11,7 @@ export const baseDebugStyle = {
 };
 
 export const sidebarContainer = {
-    height: 1700,
+    height: 2800,
     maxWidth: 400,
     padding: 20,
     float: "left" as "left",
@@ -19,7 +19,9 @@ export const sidebarContainer = {
     justifyContent: "space-between",
     textAlign: "left" as "left",
 
-    background: "linear-gradient(180deg, rgba(245, 255, 255,1) 0%, rgba(210,230,255,1) 100%)",
+    borderColor: "black",
+    borderRightWidth: 1,
+    borderRightStyle: "solid" as "solid",
 }
 
 export const pageContainer = {
@@ -28,10 +30,6 @@ export const pageContainer = {
     padding: 5,
     display: "inline-block",
     clear: "right" as "right",
-    borderColor: "linear-gradient(180deg, rgba(245, 255, 255,1) 0%, rgba(210,230,255,1) 100%)",
-    borderStyle: "solid",
-    borderWidth: "2",
-    
 }
 
 export const bodyContainer = {

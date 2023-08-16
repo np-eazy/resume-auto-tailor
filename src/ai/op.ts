@@ -13,10 +13,10 @@ export interface TailorArgs {
 };
 
 // Generation flags to save API billing whenever possible
-const GENERATE_BULLETPOINTS = false;
-const GENERATE_SKILLS = false;
+const GENERATE_BULLETPOINTS = true;
+const GENERATE_SKILLS = true;
 const GENERATE_COVERLETTER = true;
-const GENERATE_FOLLOWUP = false;
+const GENERATE_FOLLOWUP = true;
 
 class Prompt {
   header: string;
@@ -83,7 +83,7 @@ export const run = async () => {
 
     if (GENERATE_COVERLETTER) {
       fs.writeFileSync(path.join(__dirname, 'coverletters/' + tailorArgs.jobName + '.txt'), await executePrompt(model, {
-        header: 'Can you write a cover letter, based on a job description, and relevant sections of my track record? ',
+        header: 'Can you write a resume follow-up email based on a job description? Use specific elements of my track record to explain why I meet specific qualifications in the job description.',
         args: [
           'Here is my track record: `' + input3,
           '`, here is the job description: `' + jobDescription + 
@@ -96,7 +96,7 @@ export const run = async () => {
     
     if (GENERATE_FOLLOWUP) {
       fs.writeFileSync(path.join(__dirname, 'followups/' + tailorArgs.jobName + '.txt'), await executePrompt(model, {
-        header: 'Can you write a resume follow-up email, based on a job description, and relevant sections of my track record? ',
+        header: 'Can you write a resume follow-up email based on a job description? Use specific elements of my track record to explain why I meet specific qualifications in the job description.',
         args: [
           'Here is my track record: `' + input3,
           '`, here is the job description: `' + jobDescription + 

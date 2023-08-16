@@ -1,7 +1,6 @@
 import React from "react";
 import { Course, Degree } from "../../structure";
-import { baseDebugStyle, h1Style, infoContainer, infoKeyStyle, infoValStyle, parStyle, infoSubcontainer, titleStyle, roleStyle, companyStyle, teamStyle } from "../../styles";
-import { concatenate } from "../../concatenator";
+import { h1Style, infoKeyStyle, infoValStyle, parStyle, infoSubcontainer, roleStyle, companyStyle, teamStyle } from "../../styles";
 import { PlaceComponent } from "../../PlaceComponent";
 
 export const CourseEntry = (props: {course: Course}) => {
@@ -23,9 +22,9 @@ export const DegreeComponent = (props: {degree: Degree}) => {
             <div>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
                     <div style={{margin: 5}}>
-                        <div style={roleStyle}> {props.degree.degree + " " + props.degree.major} </div>
+                        <div style={roleStyle}>{props.degree.schoolName} </div>
                         <div style={{marginLeft: 0}}>
-                            <div style={companyStyle}> {props.degree.schoolName} </div>
+                            <div style={companyStyle}> {props.degree.degree + " " + props.degree.major} </div>
                             <div style={parStyle}> 
                                 <div style={teamStyle}>
                                     {props.degree.gpa ? "GPA: " + props.degree.gpa : ""}
